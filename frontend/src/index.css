@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Diagonal accent triangle for stat cards */
+.stat-accent {
+  position: relative;
+  overflow: hidden;
+}
+.stat-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 100%;
+  opacity: 0.07;
+  transform: skewX(-20deg) translateX(30px);
+}
+.stat-accent-gray::before { background: #6b7280; }
+.stat-accent-green::before { background: #16a34a; }
+.stat-accent-teal::before { background: #0d9488; }
+.stat-accent-blue::before { background: #2563eb; }
+.stat-accent-red::before { background: #dc2626; }
+.stat-accent-amber::before { background: #d97706; }
